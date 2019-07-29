@@ -1,4 +1,4 @@
-# Integração Contínua
+# Jenkins
 Este repositório contém os artefatos necessários para subir meu ambiente de integração contínua.  
 Utilizo nodes do jenkins, sendo os nodes imagens docker para necessitar instalação de ferramentas dentro do jenkins.
 
