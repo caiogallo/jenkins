@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+        jenkins:
+                container_name: jenkins-master
+                image: jenkins/jenkins:lts
+                ports:
+                        - "8080:8080"
+                        - "50000:50000"
+                volumes:
+                        - ./data/jenkins-home:/var/jenkins_home
+        jenkins-slave-dind:
+                container_name: jenkins-slave-dind
+                build:
+                        context: ./jenkins-slave-dind/ 
+                        dockerfile: Dockerfile
+                privileged: true
+                environment:
+                        - "JENKINS_SLAVE_SECRET=e86699d72d2544b4aab3f59f71103c89c29a43855ac76fd5306de58f58c2b787"
+                        - "JENKINS_URL=http://192.168.57.28:8080"
+        jenkins-slave-android:
+                container_name: jenkins-slave-android
+                build:
+                        context: ./jenkins-slave-android
+                        dockerfile: Dockerfile
+                privileged: true
+                environment:
+                        - "JENKINS_SLAVE_SECRET=691d2232abe8d177960d2f9c3960bc72ab39f78b08fe61b8e7e64e17f46655d9"
+                        - "JENKINS_URL=http://192.168.57.28:8080"
+
+
