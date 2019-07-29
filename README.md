@@ -10,9 +10,10 @@ Slave docker-in-docker para execução de comandos docker nos pipelines
 Slave com android-sdk para construção das aplicações android
 
 Para configurar os nodes vá em **Manage Jenkins/Manage Nodes**
-- jenkins-slave-dind  
-
-- jenkins-slave-android
+- Docker-in-docker slave
+![jenkins-slave-dind](readme/images/dind-node.png)
+- Android slave
+![jenkins-slave-android](readme/images/android-node.png)
 
 ## Credenciais
 ### github
