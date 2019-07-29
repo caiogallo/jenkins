@@ -4,9 +4,9 @@ Utilizo nodes do jenkins, sendo os nodes imagens docker para necessitar instala�
 
 ## Nodes
 Atualmente são 2 os slaves:
-- jenkins-slave-dind
+- jenkins-slave-dind  
 Slave docker-in-docker para execução de comandos docker nos pipelines  
-- jenkins-slave-android
+- jenkins-slave-android  
 Slave com android-sdk para construção das aplicações android
 
 ## Credenciais
