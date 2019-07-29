@@ -9,6 +9,11 @@ Slave docker-in-docker para execução de comandos docker nos pipelines
 - jenkins-slave-android  
 Slave com android-sdk para construção das aplicações android
 
+Para configurar os nodes vá em **Manage Jenkins/Manage Nodes**
+- jenkins-slave-dind  
+
+- jenkins-slave-android
+
 ## Credenciais
 ### github
 A credencial do github utiliza o id **github**, é utilizada para baixar os fontes das aplicações e é do tipo **Username with Password**
